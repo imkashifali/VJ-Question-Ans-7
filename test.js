@@ -1,33 +1,29 @@
-const hex = [0,1,2,3,4,5,6,7,8,9,0,"A","B","C","D","E","F"];
-const btn = document.getElementById("btn");
-const color = document.querySelector(".color");
+let count = 0;
+const value = document.querySelector("#value");
+const btns = document.querySelectorAll(".btn");
 
-btn.addEventListener("click", function () {
-let hexColr = "#";
-    for (let i = 0; i < 6; i++) {
-         hexColr += hex[getnumbers()];
 
-        color.textContent=hexColr;
-        document.body.style.backgroundColor=hexColr
-    }
-});
-function getnumbers() {
-    return Math.floor(Math.random()* hex.length);
-}
-//2Nd Methiod
+btns.forEach(function(btn){
+    btn.addEventListener("click",function(e){
+        let styles = e.currentTarget.classList;
+        console.log(styles)
 
-// const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
-// const btn = document.getElementById("btn");
-// const color = document.querySelector(".color");
-
-// btn.addEventListener("click", function () {
-//   console.log(document.body)
-//     const randomNumber = getNumber();
-//     console.log(randomNumber)
-
-//   document.body.style.backgroundColor=colors[randomNumber];
-//   color.textContent=colors[randomNumber]
-// });
-// function getNumber (){
-//     return Math.floor (Math.random()*colors.length);
-// }
+        if(styles.contains("decrease")){
+            count--
+        }
+        else if(styles.contains("increase")){
+            count++;
+        }else{
+            count=0
+        }
+      if(count < 0){
+        value.style.color="red"
+      }if(count > 0){
+        value.style.color ="green"
+      }
+      if(count === 0){
+        value.style.color="black"
+      }
+        value.textContent=count
+    })
+})
