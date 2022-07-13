@@ -1,14 +1,18 @@
-const navtoggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".links");
+const toggleBtn = document.querySelector(".sidebar-toggle");
+const closeBtn = document.querySelector(".close-btn");
+const sideBar = document.querySelector(".sidebar");
 
-navtoggle.addEventListener("click", function () {
-  console.log(links.classList);
-  console.log(links.classList.contains("random"));
 
-//   if (links.classList.contains("show-links")) {
-//     links.classList.remove("show-links")
-//   } else {
-//     links.classList.add("show-links")
-//   }
-  links.classList.toggle("show-links")
-});
+toggleBtn.addEventListener("click",function(){
+    // console.log(sideBar.classList);
+    // console.log("listing",sideBar.classList);
+
+    // if(sideBar.classList.contains("sidebar")){
+    //     sideBar.classList.remove("sidebar")
+    // }else{
+    //     sideBar.classList.add("sidebar")
+    // }
+    sideBar.classList.toggle("sidebar")
+
+})
+
