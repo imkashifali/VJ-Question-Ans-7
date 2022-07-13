@@ -4,21 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanila Js Color Fliker</title>
+    <title>Vanila Js Review Projec-3</title>
     <link rel="stylesheet" href="./test.css"></link>
 </head>
 <body>
-  
     <main>
-        <div class="container">
-          <h1>counter</h1>
-          <span id="value">0</span>
-          <div class="button-container">
-            <button class="btn decrease">decrease</button>
-            <button class="btn reset">reset</button>
-            <button class="btn increase">increase</button>
+        <section class="container">
+          <!-- title -->
+          <div class="title">
+            <h2>our reviews</h2>
+            <div class="underline"></div>
           </div>
-        </div>
+          <!-- review -->
+          <article class="review">
+            <div class="img-container">
+              <img src="person.jpeg" id="person-img" alt="" />
+            </div>
+            <h4 id="author">sara jones</h4>
+            <p id="job">ux designer</p>
+            <p id="info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+              Iste, doloremque nihil?
+            </p>
+            <!-- prev next buttons-->
+            <div class="button-container">
+              <button class="prev-btn">
+                <i class="fas fa-chevron-left">a</i>
+              </button>
+              <button class="next-btn">
+                <i class="fas fa-chevron-right">b</i>
+              </button>
+            </div>
+            <!-- random button -->
+            <button class="random-btn">surprise me</button>
+          </article>
+        </section>
       </main>
 
     <script src="./test.js"></script>
