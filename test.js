@@ -1,10 +1,25 @@
-const modelBtn = document.querySelector(".modal-btn");
-const modal = document.querySelector(".modal-overlay");
-const closeBtn = document.querySelector(".close-btnss");
+const questions = document.querySelectorAll(".question");
 
-modelBtn.addEventListener("click", function () {
-  modal.classList.add("open-modal");
+questions.forEach(function (question) {
+  const btn = question.querySelector(".question-btn");
+
+  btn.addEventListener("click", function () {
+    questions.forEach(function (item) {
+        if(item !== question){
+            item.classList.remove("show-text")
+        }
+    });
+    question.classList.toggle("show-text");
+
+  });
+
 });
-closeBtn.addEventListener("click", function () {
-  modal.classList.remove("open-modal");
-});
+
+// const Btnss = document.querySelectorAll(".question-btn");
+
+// Btnss.forEach(function (btn) {
+//   btn.addEventListener("click", function (e) {
+//     const question = e.currentTarget.parentElement.parentElement;
+//     question.classList.toggle("show-text")
+// });
+// });
